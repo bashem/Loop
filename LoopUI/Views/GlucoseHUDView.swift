@@ -73,7 +73,13 @@ public final class GlucoseHUDView: BaseHUDView {
             switch sensorAlertState {
             case .ok:
                 alertLabelAlpha = 0
-            case .missing, .invalid:
+
+//JBC 20170414 missing will be ?
+//            case .missing, .invalid:
+//                alertLabel.text = "!"
+            case .missing:
+                alertLabel.text = "?"
+            case .invalid:
                 alertLabel.text = "!"
             case .remote:
                 alertLabel.text = "☁︎"

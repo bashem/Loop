@@ -471,7 +471,9 @@ final class DeviceDataManager: CarbStoreDelegate, DoseStoreDelegate {
         /// characteristic which can cause the app to wake. For most users, the G5 Transmitter and
         /// G4 Receiver are reliable as hearbeats, but users who find their resources extremely constrained
         /// due to greedy apps or older devices may choose to always enable the timer by always setting `true`
-        rileyLinkManager.timerTickEnabled = !(cgmManager?.providesBLEHeartbeat == true)
+        // JBC 2017-04-14 debug issue https://github.com/LoopKit/Loop/issues/436 
+        // rileyLinkManager.timerTickEnabled = !(cgmManager?.providesBLEHeartbeat == true)
+        rileyLinkManager.timerTickEnabled = true
     }
 
     var sensorInfo: SensorDisplayable? {
