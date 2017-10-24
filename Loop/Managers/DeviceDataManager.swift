@@ -500,8 +500,8 @@ final class DeviceDataManager {
         // JBC 2017-04-14 debug issue https://github.com/LoopKit/Loop/issues/436 
         // rileyLinkManager.timerTickEnabled = !(cgmManager?.providesBLEHeartbeat == true)
         // rileyLinkManager.timerTickEnabled = true
-        //JBC TODO
         updateTimerTickPreference()
+        // TODO: Look at updateTimerTickPreference()
     }
 
     var sensorInfo: SensorDisplayable? {
